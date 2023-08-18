@@ -1,3 +1,5 @@
+//Manual system
+//Triangle Area
 function calculateTriArea(){
     // document.getElementById('idName').addEventListener();
     const base = document.getElementById('t-base');
@@ -14,6 +16,7 @@ function calculateTriArea(){
     // return TriArea;
     console.log(TriArea)
 }
+//Rectangle Area
 function calculateRecArea(){
     const width = document.getElementById('r-width');
     const widthValueStr = width.value;
@@ -26,6 +29,34 @@ function calculateRecArea(){
     const recArea = widthValue * lengthValue;
     const areaSpan = document.getElementById('area-span-r');
     areaSpan.innerText = recArea;
-    // return recArea;
     console.log(recArea)
+}
+
+//Reusable Function --> Reduce duplicate code
+//reusable get input value in number
+function getInputValue(inputId){
+    const inputField = document.getElementById(inputId);
+    const inputValueStr = inputField.value;
+    const inputValue = parseFloat(inputValueStr);
+    return inputValue;
+}
+//reusable set div/p/span value
+function setElementInnerText(elementId, area){
+    const elementField = document.getElementById(elementId);
+    elementField.innerText = area;
+}
+//Parallelogram Area
+function calculateParaArea(){
+    const base = getInputValue("p-base");
+    const height = getInputValue("p-height");
+    const paraArea = base * height;
+    setElementInnerText("area-span-p", paraArea);
+}
+//Ellipse Area
+function calculateElliArea(){
+    const majorRad = getInputValue('e-radius1');
+    const minorRad = getInputValue('e-radius2');
+    const pi = Math.PI;
+    const area = pi * majorRad * minorRad;
+    setElementInnerText("area-span-e", area);
 }

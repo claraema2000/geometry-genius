@@ -29,10 +29,10 @@
                       </p>
                       <p class="font-bold text-lg">Area = <span id="area-span-t" class="font-medium text-base">00 </span><span class="font-medium text-base">cm <sup>2</sup></span></p>
                       <div class="card-action w-3/4">
-                        <button onclick="calculateTriArea()" id="cal-tri" class="btn btn-outline btn-info w-full">Calculate</button>
+                        <button onclick="calculateTriArea()" class="btn btn-outline btn-info w-full">Calculate</button>
                       </div>
                     </div>
-                  </div>
+                </div>
                 <!-- Second card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                   <figure class="px-10 pt-10">
@@ -47,23 +47,28 @@
                     </p>
                     <p class="font-bold text-lg">Area = <span id="area-span-r" class="font-medium text-base">00 </span><span class="font-medium text-base">cm <sup>2</sup></span></p>
                     <div class="card-action w-3/4">
-                      <button onclick="calculateRecArea()" id="cal-rec" class="btn btn-outline btn-info w-full">Calculate</button>
+                      <button onclick="calculateRecArea()" class="btn btn-outline btn-info w-full">Calculate</button>
                     </div>
                   </div>
                 </div>
                 <!-- Third card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="/images/parallelogram.png" alt="Parallelogram"/>
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Parallelogram</h2>
-                      <p>Area(A) = 0.5 b h</p>
-                      <div class="card-action w-3/4">
-                        <button class="btn btn-outline btn-info w-full">Calculate</button>
-                      </div>
+                  <figure class="px-10 pt-10">
+                    <img src="/images/parallelogram.png" alt="Parallelogram" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title">Parallelogram</h2>
+                    <p>Area(A) = b x h</p>
+                    <p class="grid grid-flow-col gap-2">
+                      <input type="text" class="w-20 px-2" placeholder="b" name="" id="p-base"><span class="ml-3">cm</span>
+                      <input type="text" class="w-20 px-2" placeholder="h" name="" id="p-height"><span class="ml-3">cm</span>
+                    </p>
+                    <p class="font-bold text-lg">Area = <span id="area-span-p" class="font-medium text-base">00 </span><span class="font-medium text-base">cm <sup>2</sup></span></p>
+                    <div class="card-action w-3/4">
+                      <button onclick="calculateParaArea()" class="btn btn-outline btn-info w-full">Calculate</button>
                     </div>
                   </div>
+                </div>
                 <!-- Fourth card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
@@ -92,17 +97,22 @@
                   </div>
                 <!-- Sixth card -->
                 <div class="card w-96 bg-base-100 shadow-xl">
-                    <figure class="px-10 pt-10">
-                      <img src="/images/ellipse.png" alt="Ellipse"/>
-                    </figure>
-                    <div class="card-body items-center text-center">
-                      <h2 class="card-title">Ellipse</h2>
-                      <p>Area(A) = 0.5 b h</p>
-                      <div class="card-action w-3/4">
-                        <button class="btn btn-outline btn-info w-full">Calculate</button>
-                      </div>
+                  <figure class="px-10 pt-10">
+                    <img src="/images/ellipse.png" alt="Ellipse" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title">Ellipse</h2>
+                    <p>Area(A) = πab</p>
+                    <p class="grid grid-flow-col gap-2">
+                      <input type="text" class="w-20 px-2" placeholder="a" name="" id="e-radius1"><span class="ml-3">cm</span>
+                      <input type="text" class="w-20 px-2" placeholder="b" name="" id="e-radius2"><span class="ml-3">cm</span>
+                    </p>
+                    <p class="font-bold text-lg">Area = <span id="area-span-e" class="font-medium text-base">00 </span><span class="font-medium text-base">cm <sup>2</sup></span></p>
+                    <div class="card-action w-3/4">
+                      <button onclick="calculateElliArea()" class="btn btn-outline btn-info w-full">Calculate</button>
                     </div>
                   </div>
+              </div>
             </div>
             <!-- Area calculator -->
             <div class="w-[400px]">
